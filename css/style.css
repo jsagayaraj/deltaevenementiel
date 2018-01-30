@@ -134,15 +134,15 @@ a.w3_agile_dribble:hover{
   color: #b59658;
   font-size: 1.6em;    
 }
+.navbar-default .navbar-nav > li > a:hover, .dropdown-menu > li > a:hover{
+    color: #00071d;
+    background-color: #b59658;
+  }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: #00071d!important;
     background-color: #b59658;
 }
 
-/*.navbar-default .navbar-nav > li > a:hover, .dropdown-menu > li > a:hover{
-    color: #00071d;
-    background-color: #b59658;
-  }*/
 
 .navbar-default{
     background-color: #00071d;

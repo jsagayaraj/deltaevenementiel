@@ -34,11 +34,11 @@
   //page scroll///////////////////////////
   
   //Initialize header hight from the top
-  var headerHeight = 80;
+  var headerHeight = 50;
   $('a.page-scroll').click(function(e){
     e.preventDefault();
     var linkhref = $(this).attr('href');
-    //console.log(headerHeight);
+    //console.log(headrHeight);
     //console.log($(linkhref).offset().top);
     $('html, body').animate({
       scrollTop:$(linkhref).offset().top - headerHeight
