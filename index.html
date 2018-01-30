@@ -9,13 +9,15 @@
         <!-- Favicon-->
         <link rel="shortcut icon" href="images/favicon.png" >
         
-
-        <link rel="stylesheet" href="css/bootstrap.css"/>
-        <link rel="stylesheet" href="css/main.css">
+        <!-- link -->
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/normalize.csss">
-        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
         <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.0.0/animate.min.css" rel="stylesheet" type="text/css">
+
+        <!-- google font -->
         <link href="https://fonts.googleapis.com/css?family=Niconne" rel="stylesheet"> 
     </head>
     <body data-spy="scroll" data-target=".navbar" data-offset="30">
@@ -60,9 +62,18 @@
               <ul class="nav navbar-nav navbar-center">
                 <li><a class="page-scroll" href="#home">Accueil</a></li>
                 <li><a class="page-scroll" href="#qsn">Qui Sommes-Nous</a></li>
-                <li><a class="page-scroll" href="#evenement">Evénements</a></li>
+
+                <li class="dropdown">
+                  <a class="dropdown-toggle page-scroll" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#evenement">Nos Evénements <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                    <li><a class="page-scroll" href="#events-prof">Evénements Professionnels</a></li>
+                    <li><a class="page-scroll" href="#events-eco">Evénements Eco-Responsables</a></li>
+                    <li><a class="page-scroll" href="#events-prives">Evénements Privés</a></li>
+                  </ul>         
+                </li>
+                <li><a class="page-scroll" href="">Nos Offres</a></li>
                 <li><a class="page-scroll" href="#gallery">Galerie</a></li>
-                <li><a class="page-scroll" href="#contact">Contact</a></li>
+                <li><a class="page-scroll" href="#contact">Nous Contacter</a></li>
               </ul>
             </div>
           </nav>
@@ -79,7 +90,7 @@
                           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                           <li data-target="#myCarousel" data-slide-to="1"></li>
                           <li data-target="#myCarousel" data-slide-to="2"></li>
-                          
+                          <li data-target="#myCarousel" data-slide-to="3"></li>
                         </ol>
 
                         <!-- Wrapper for slides -->
@@ -87,6 +98,11 @@
                           <div class="item active">
                             <img src="images/banner.jpg" height="460" width="100%" alt="1st banner of the site">
                           </div>
+                          
+                          <div class="item">
+                            <img src="images/banner-1.jpg" height="460" width="100%" alt="3rd banner of the site">
+                          </div>
+
                           <div class="item">
                             <img src="images/banner-2.jpg" height="460" width="100%" alt="3rd banner of the site">
                           </div>
@@ -103,7 +119,7 @@
             <!--CAROUSEL-->
             
             <!--Qui Sommes Nous-->
-            <section id="qsn" class="wow fadeInUp" data-wow-delay="0.6">
+            <section id="qsn" class="qsn wow fadeInUp" data-wow-delay="0.6">
               <div class="container gallery-container">
                 <h1>Qui Sommes-Nous</h1>
                   <div class="row bm">
@@ -122,8 +138,8 @@
                       <p>Nous croyons en l’événement comme catalyseur d’émotions, créateur de liens, comme un moyen puissant pour mobiliser, impliquer et replacer les Hommes au cœur des entreprises et de leur performance. Au même titre, partage, respect et contact humain sont au centre de nos relations professionnelles. Au-delà de la simple relation client – fournisseur, nous souhaitons créer avec nos clients une relation de véritable partenariat.</p>
 
                       <h3>La personnalisation et la créativité</h3>
-                      <p>Oubliez les habitudes et le déjà-vu, chaque évènement étant unique, nous souhaitons sans cesse être force de proposition et vous inscrire dans une démarche personnalisée. Pour chaque client la problématique est unique, nous l’analysons, la comprenons et construisons avec vous la solution événementielle la mieux adaptée à vos besoins et à votre budget.
-                      La connaissance et l'expertise du terrain</p>
+                      <p>Oubliez les habitudes et le déjà-vu, chaque évènement étant unique, nous souhaitons sans cesse être force de proposition et vous inscrire dans une démarche personnalisée. Pour chaque client la problématique est unique, nous l’analysons, la comprenons et construisons avec vous la solution événementielle la mieux adaptée à vos besoins et à votre budget.</p>
+                      <h3>La connaissance et l'expertise du terrain</h3>
                       <p>Etre à l’écoute des tendances et cultiver la nouveauté. Continuellement actualiser notre solide réseau de partenaires et assurer en permanence la coordination entre les différents prestataires.</p>
 
                     </div>
@@ -132,11 +148,12 @@
             </div><!--container-->
             </section>
             <!--Qui Sommes Nous-->
-            
-            <section id="evenement" class="wow fadeInUp" data-wow-delay="0.6">
-              <div class="container-fluid even">
-                <div class="container gallery-container">
-                  <h1>Evenements</h1>
+
+
+            <!--Nos Evenements-->
+            <section id="evenement" class="evenement wow fadeInUp" data-wow-delay="0.6">
+                <div class="container gallery-container" id="events-prof">
+                  <h1>Nos Evenements</h1>
                     <div class="comp">
                       <h2>Evénements Professionnels</h2>
                        <div class="row">
@@ -145,8 +162,9 @@
                         </div>
                         <div class="col-md-7">
                           <h3>Team Building </h3>
-                          <p>Parce que la cohésion de groupe est primordiale au développement de votre activité, quoi de mieux, pour renforcer l’esprit d’équipe et créer une atmosphère propice au travail, qu’une activité de team building ?
-                          Lancement de produit. Après d’innombrables heures de dur labeur, votre projet va enfin voir le jour. Ne laissez rien au hasard et permettez-nous d’apporter la touche finale à sa concrétisation.</p>
+                          <p>Parce que la cohésion de groupe est primordiale au développement de votre activité, quoi de mieux, pour renforcer l’esprit d’équipe et créer une atmosphère propice au travail, qu’une activité de team building ?</p>
+                          <h3>Lancement de produit</h3> 
+                          <p>Après d’innombrables heures de dur labeur, votre projet va enfin voir le jour. Ne laissez rien au hasard et permettez-nous d’apporter la touche finale à sa concrétisation.</p>
                           <h3>Cocktails</h3> 
                           <p>Dans une ambiance conviviale, idéale pour faire connaissance ou renforcer des liens, vos convives vont pouvoir profiter pleinement de cet instant.</p>
                           <h3>Séminaires, Congrès</h3>
@@ -157,50 +175,54 @@
                     </div>
                     <div class="clearfix"> </div>
                   </div>
-
-                    <div class="comp">
-                      <h2>Evénements Eco-Responsables</h2>
-                      <div class="row">
-                        <div class="col-md-7">
-                          <p>L’objectif ici est de faire vivre ensemble la démarche développement durable pour qu’elle se développe et se généralise dans un maximum de manifestations.</p>
-                        </div>
-                        <div class="col-md-5 image-pad wow fadeInRightBig">
-                           <img src="images/photo1.jpg" height="426" width="640" class="img-responsive" alt="Evénements Professionnels">
-                        </div>
+                  
+                  <div class="comp" >
+                    <div id="events-eco">
+                        <h2>Evénements Eco-Responsables</h2>
+                        <div class="row">
+                          <div class="col-md-7">
+                            <p>L’objectif ici est de faire vivre ensemble la démarche développement durable pour qu’elle se développe et se généralise dans un maximum de manifestations.</p>
+                          </div>
+                          <div class="col-md-5 image-pad wow fadeInRightBig">
+                             <img src="images/photo1.jpg" height="426" width="640" class="img-responsive" alt="Evénements Professionnels">
+                          </div>
+                      </div>
+                      <div class="clearfix"> </div>
                     </div>
-                    <div class="clearfix"> </div>
                   </div>
 
                   <div class="comp">
-                    <h2>Evénements Privés </h2>
-                      <div class="row">
-                        <div class="col-md-5 image-pad wow fadeInLeftBig">
-                           <img src="images/cake.jpg" height="426" width="640" class="img-responsive" alt="Evénements Professionnels">
-                        </div>
-                        <div class="col-md-7">
-                          <h3>Divorce party</h3>
-                          <p>Une page se tourne, un nouveau chapitre de votre vie est à écrire. Pourquoi ne pas le commencer dans la bonne humeur, en organisant un évènement qui marquera les esprits et donnera le ton de ce nouveau départ.</p>
-                          <h3>Coming Out</h3> 
-                          <p>Votre véritable vie va enfin pouvoir commencer. Ce jour est à marquer d’une pierre blanche puisque vous venez de vous délester d’un lourd fardeau. Foncez ! La vie est trop courte pour se préoccuper du qu’en-dira-t-on.</p>
-                          <h3>Mariage</h3>
-                          <p>Pour ce jour mémorable, le stress des préparatifs ne doit pas être au rendez-vous. Soyez sereins, votre rêve est entre de bonnes mains.</p>
-                          <h3>Anniversaire</h3>
-                          <p>Un an de plus, ça se fête. Organisons ensemble un évènement à votre image car les années passent mais ne se ressemblent pas.</p>
-                          <h3>Réception privée </h3>
-                          <p>N’attendez pas d’avoir une raison officielle pour vous réunir en famille ou entre amis. Créez cette occasion quand bon vous semble.</p>
-                          <br/>
-                        </div>
+                    <div id="events-prives">
+                      <h2>Evénements Privés </h2>
+                        <div class="row">
+                          <div class="col-md-5 image-pad wow fadeInLeftBig">
+                             <img src="images/cake.jpg" height="426" width="640" class="img-responsive" alt="Evénements Professionnels">
+                          </div>
+                          <div class="col-md-7">
+                            <h3>Divorce party</h3>
+                            <p>Une page se tourne, un nouveau chapitre de votre vie est à écrire. Pourquoi ne pas le commencer dans la bonne humeur, en organisant un évènement qui marquera les esprits et donnera le ton de ce nouveau départ.</p>
+                            <h3>Coming Out</h3> 
+                            <p>Votre véritable vie va enfin pouvoir commencer. Ce jour est à marquer d’une pierre blanche puisque vous venez de vous délester d’un lourd fardeau. Foncez ! La vie est trop courte pour se préoccuper du qu’en-dira-t-on.</p>
+                            <h3>Mariage</h3>
+                            <p>Pour ce jour mémorable, le stress des préparatifs ne doit pas être au rendez-vous. Soyez sereins, votre rêve est entre de bonnes mains.</p>
+                            <h3>Anniversaire</h3>
+                            <p>Un an de plus, ça se fête. Organisons ensemble un évènement à votre image car les années passent mais ne se ressemblent pas.</p>
+                            <h3>Réception privée </h3>
+                            <p>N’attendez pas d’avoir une raison officielle pour vous réunir en famille ou entre amis. Créez cette occasion quand bon vous semble.</p>
+                            <br/>
+                          </div>
+                      </div>
+                      <div class="clearfix"> </div>
                     </div>
-                    <div class="clearfix"> </div>
                   </div>
                 
               </div><!--container gallery-container-->
-              </div><!--container-fluid-->
+              
             </section>
           
 
             <!-- gallery -->
-            <section id="gallery" class=" gallery wow fadeInUp" data-wow-delay="0.6">
+            <section id="gallery" class="gallery wow fadeInUp" data-wow-delay="0.6">
               <div class="container gallery-container">
                 <h1 class="text-center">Gallery</h1>    
                   <div class="tz-gallery">
@@ -259,9 +281,8 @@
              
    <!-- contact -->
   <section class="contact wow fadeInUp" data-wow-delay="0.6" id="contact">
-    <div class="container-fluid even">
-      <div class="container gallery-container">
     
+      <div class="container gallery-container">
       <h1>Contact</h1>
       <div class="contact-bottom w3-agileits">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.7717390628345!2d2.8836705149039648!3d48.957832101655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e8a10f7ce502e7%3A0xb2dd9dc8b762f2d6!2s5+Rue+de+la+Cr%C3%A8che%2C+77100+Meaux!5e0!3m2!1sen!2sfr!4v1515195839122" allowfullscreen></iframe> 
@@ -269,55 +290,71 @@
       <div class="contact-form">
         <div class="row">
           <div class="col-md-8">
-            <h2>Contact Form</h2>
-            <form  action="contact.php" method="post">
-              <div class=" form-group input-group input-group-lg wow fadeInUp" data-wow-delay="0.8s">
-                <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
-                <input type="text" class="form-control" name="name" required placeholder="Nom & Prenom">
-              </div>
-
-              <div class="form-group input-group input-group-lg wow fadeInUp" data-wow-delay="1s">
-                <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                <input type="email" class="form-control" name="email" required placeholder="Email">
-              </div>
-
-              <div class="form-group input-group input-group-lg wow fadeInUp" data-wow-delay="1.1s">
-                <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-phone" aria-hidden="true"></i></span>
-                <input type="text" class="form-control" name="phone" required placeholder="Télephone">
-              </div>
-
-              <div class="form-group input-group input-group-lg wow fadeInUp" data-wow-delay="1s">
-                <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-hand-o-right" aria-hidden="true"></i></span>
-                <select class="form-control" name="evenetment">
-                  <option selected>Choisir un Evenement</option>
-                  <option value="0">Professionnels</option>
-                  <option value="1">Mariage</option>
-                  <option value="2">Anniversaire</option>
-                  <option value="3">Réception Privée</option>
-                </select>
-              </div>
             
-              <textarea name="message" id="" cols="80" class="form-control" placeholder="Message"></textarea>
-             
-              <button class="btn btn-primary btn-lg btn-block wow fadeInUp" data-wow-delay="1s">Envoyer Votre Message</button>
+            <form  name="sentMessage" id="contactForm" novalidate>
+            <div class="form-group">
+              <div class="input-group input-group-lg wow fadeInUp" data-wow-delay="0.8s">
+                <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input type="text" class="form-control" id="name" name="name" required placeholder="Nom & Prenom">
+              </div>
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group"> 
+                <div class="input-group input-group-lg wow fadeInUp" data-wow-delay="1s">
+                  <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                  <input type="email" class="form-control" id="email" name="email" required="required" placeholder="Email">
+                </div>
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-lg wow fadeInUp" data-wow-delay="1.1s">
+                  <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" id="phone" name="phone" required placeholder="Télephone">
+                </div>
+                <p class="help-block text-danger"></p>
+              </div>
+              
+                <div class="form-group input-group input-group-lg wow fadeInUp" data-wow-delay="1s">
+                  <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-hand-o-right" aria-hidden="true"></i></span>
+                  <select class="form-control" id="evenement" name="evenement">
+                    <option selected>Choisir un Evenement</option>
+                    <option value="Team Building">Team Building</option>
+                    <option value="Lancement de produit">Lancement de produit</option>
+                    <option value="Cocktails">Cocktails</option>
+                    <option value="Séminaires">Séminaires</option>
+                    <option value="Congrès">Congrès</option>
+                    <option value="Réunions">Réunions</option>
+                    <option value="Divorce party">Divorce party</option>
+                    <option value="Coming Out">Coming Out</option>
+                    <option value="Mariage">Mariage</option>
+                    <option value="Anniversaire">Anniversaire</option>
+                    <option value="Réception Privée">Réception Privée</option>
+                  </select>
+                </div>   
+
+              <div class="form-group">
+                <textarea name="message" id="message" cols="80" class="form-control" placeholder="Message"></textarea>
+              </div>
+              <div id="success"></div>
+              <button type="submit" class="btn btn-primary btn-lg btn-block wow fadeInUp">Envoyer Votre Message</button>
             </form>
           </div>
           <div class="col-md-4 mb">
-            <h2>Address</h2>
+            <h2>Adresse</h2>
             <div class="address">
               <p> Delta Evenementiel </p>
               <p>5 Rue de la crèche,</p>
               <p>77100 Meaux, France</p>
               <p>Phone : (+33) 07.67.28.60.60</p>
-              <p>Mail : <a href="mailto:info@example.com">info@example.com</a></p>
+              <p>Mail : <a href="contact@deltaevenementiel.com">contact@deltaevenementiel.com</a></p>
             </div>
           </div>
           <div class="clearfix"> </div>
         </div><!--row-->
       </div><!--.contact-form-->
       </div><!--container-->
-    </div><!--container-fluid-->
   </section>
+
   <!-- //contact -->
 <div class="container"> 
 <?php   echo $msg ?>
@@ -347,18 +384,16 @@
  <!-- footer -->
 
 
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/carousel.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/modernizr.min.js"></script>
-        
-        <script src="js/wow.min.js"></script>
-        <!--<script src="js/SmoothScroll.js"></script>-->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/modernizr.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script>
+        <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
+        <script type="text/javascript" src="js/contact_me.js"></script> 
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-        
+  
                 
 
          <!--Google Analytics: change UA-XXXXX-Y to be your site's ID.-->

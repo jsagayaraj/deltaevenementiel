@@ -23,17 +23,27 @@
 
     //End scrool sticky nav on top /////////////////////
 
+    //make menus dropdown automaticaly
+    $('ul.nav li.dropdown').hover(function(){
+        $('.dropdown-menu', this).fadeIn();
+    }, function(){
+        $('.dropdown-menu', this).fadeOut('slow');
+    });//hover
+
 
   //page scroll///////////////////////////
-  (function () {
-        $('a.page-scroll').on('click', function (e) {
-            e.preventDefault();
-            var $anchor = $(this);
-            $('html, body').stop().animate({
-                scrollTop : $($anchor.attr('href')).offset().top
-            }, 1500, 'easeInOutExpo');
-        });
-    }());
+  
+  //Initialize header hight from the top
+  var headerHeight = 80;
+  $('a.page-scroll').click(function(e){
+    e.preventDefault();
+    var linkhref = $(this).attr('href');
+    //console.log(headerHeight);
+    //console.log($(linkhref).offset().top);
+    $('html, body').animate({
+      scrollTop:$(linkhref).offset().top - headerHeight
+    },1500, 'easeInOutExpo');
+  });
 
 
 // Add active class to the menu dynamically
